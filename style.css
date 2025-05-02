@@ -1,3 +1,8 @@
+
+* {
+    box-sizing: border-box;
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,6 +18,26 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+}
+
+main{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.carousel-item{
+    text-align: center;
+    align-items: center;
+}
+.carousel-item img{
+    border-radius: 10%;
+    height: 200px;
+    width: 200px;
 }
 
 .directorio-restaurantes {
