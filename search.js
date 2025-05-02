@@ -8,7 +8,7 @@ const mostrarRestaurantes= (lista = restaurantes)=>{
         ({name, estrellas, direccion, imagen, categoria})=>
         `
             <div class="restaurant-card">
-                    <img src="${imagen}" alt="Restaurante ${categoria}">
+                    <img src="${imagen}" alt="Restaurante ${name}">
                     <h3>${name}</h3>
                     <p>${direccion}</p>
                     <p>${estrellas} | ${categoria}</p>
