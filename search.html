@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Restaurantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Encuentra el Restaurante que más te guste</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#search-container">Buscar</a></li>
+                <li><a href="#featured-restaurants">Destacados</a></li>
+                <li><a href="#reservation">Reservas</a></li>
+                <li><a href="#reviews">Opiniones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 🔍 Búsqueda y filtros -->
+        <section id="search-container">
+            <h2>Encuentra tu Restaurante Favorito</h2>
+            <input type="text" id="search" placeholder="Escribe un nombre o categoría..." />
+            <select id="category">
+                <option value="">Todas las categorías</option>
+                <option value="italiano">Italiano</option>
+                <option value="mexicano">Mexicano</option>
+                <option value="japones">Japonés</option>
+            </select>
+            <button id="search-btn">Buscar</button>
+        </section>
+
+        <!-- ⭐ Restaurantes destacados -->
+        <section id="featured-restaurants">
+            <h2>Restaurantes Destacados</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="restaurante1.jpg" alt="Restaurante Italiano">
+                    <p>La Pizzería Italiana - ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="restaurante2.jpg" alt="Restaurante Mexicano">
+                    <p>El Sabor Mexicano - ⭐⭐⭐⭐</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="restaurante3.jpg" alt="Restaurante Japonés">
+                    <p>Sushi House - ⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📌 Resultados de búsqueda -->
+        <section id="search-results" class="restaurant-container">
+            <h2>Resultados de Búsqueda</h2>
+            <div class="restaurant-card">
+                <img src="restaurante1.jpg" alt="Restaurante Italiano">
+                <h3>La Pizzería Italiana</h3>
+                <p>⭐ 4.8 | Cocina Italiana</p>
+                <button class="details-btn">Ver Detalles</button>
+            </div>
+        </section>
+
+        <!-- 📍 Mapa interactivo -->
+        <section id="map-section">
+            <h2>Ubicación de Restaurantes</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- 📝 Reservas -->
+        <section id="reservation">
+            <h2>Reserva tu Mesa</h2>
+            <form id="reservation-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" required>
+
+                <label for="people">Número de personas:</label>
+                <input type="number" id="people" required>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+
+        <!-- ⭐ Opiniones de Usuarios -->
+        <section id="reviews">
+            <h2>Opiniones de Usuarios</h2>
+            <div class="review">
+                <p>"La comida fue increíble, el servicio excelente. Definitivamente volveré." - ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="review">
+                <p>"Buena comida pero el servicio un poco lento. Aún así, recomendable." - ⭐⭐⭐⭐</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Directorio Gastronómico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_API&callback=initMap" async defer></script>
+
+</body>
+</html>

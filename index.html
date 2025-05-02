@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Restaurantes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="directorio-restaurantes">
+            <img class="logo-1" src="Imagen0.png" alt="Logo del directorio">
+            <h1 class="titulo-directorio">Directorio de Restaurantes Max Food</h1> <!-- Título agregado -->
+
+            <label for="restaurantes-destacados" aria-label="Mostrar restaurantes destacados">
+            </label>
+    
+    </div>
+
+    <nav class="navbar">
+        <div class="lista-1">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="search.html">Buscar</a></li>
+                <li><a href="new.html">Nuevo Restaurante</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Visita nuestra página de Facebook">📘 Facebook</a>
+            <a href="https://instagram.com" target="_blank" aria-label="Visita nuestro perfil de Instagram">📸 Instagram</a>
+            <a href="https://twitter.com" target="_blank" aria-label="Síguenos en Twitter">🐦 Twitter</a>
+        </div>
+    </nav>
+</header>
+
+<div class="header-content">
+    <div class="swiper mySwiper-1" aria-label="Carrusel de restaurantes destacados">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slider">
+                    <div class="slider-text">
+                        <h1>🍽️ Restaurantes Destacados</h1>
+                        <p>"Descubre los mejores restaurantes, donde la calidad, el sabor y la experiencia se combinan para ofrecer momentos inolvidables. Desde acogedores cafés hasta elegantes restaurantes gourmet, cada lugar en nuestro directorio ha sido seleccionado por su excelencia en gastronomía y servicio. ¡Encuentra el sitio perfecto para cada ocasión!"</p> 
+                    </div>
+                    <div class="slider-img">
+                        <img src="Imagen1.png" alt="Imagen destacada de restaurante">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="restaurantes">
+    <div class="tabs">
+        <input type="radio" name="tabs" id="tab1" checked class="tabInput" value="1">
+        <label for="tab1">Restaurantes</label>
+
+        <div class="tab">
+            <div class="swiper mySwiper-2" id="mySwiper1" aria-label="Carrusel de restaurantes">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="restaurante">
+                            <div class="restaurante-img">
+                                <img src="Imagen2.png" alt="Imagen de restaurante Gourmet Express">
+                            </div>
+                            <div class="restaurante-txt">
+                                <h4>Gourmet Express</h4>
+                                <p>Av. 10 # 15 - 80 Bogotá</p>
+                                <p>Cocina internacional con servicio rápido</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="restaurante">
+                            <div class="restaurante-img">
+                                <img src="Imagen3.png" alt="Imagen de restaurante Asado Parrilla">
+                            </div>
+                            <div class="restaurante-txt">
+                                <h4>Asado Parrilla</h4>
+                                <p>Cra 20 # 45 - 90 Cali</p>
+                                <p>Especialistas en carnes y parrilla</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="restaurante">
+                            <div class="restaurante-img">
+                                <img src="Imagen4.png" alt="Imagen de restaurante Delicias Marinas">
+                            </div>
+                            <div class="restaurante-txt">
+                                <h4>Delicias Marinas</h4>
+                                <p>Cra 12 # 50 - 15 Barranquilla</p>
+                                <p>Pescados y mariscos frescos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+

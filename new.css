@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('tu-imagen.jpg'); /* Cambia esto con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    color: white;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(68, 68, 68, 0.8); /* Transparencia */
+    padding: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Contenedor de promociones */
+.promo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.promo-card {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparencia para armonizar con el fondo */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.promo-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Ajustes responsivos */
+@media screen and (max-width: 768px) {
+    .promo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .promo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparencia */
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    background-color: rgba(68, 68, 68, 0.8);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}

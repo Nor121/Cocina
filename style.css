@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.directorio-restaurantes {
+    display: flex;
+    align-items: center;
+}
+
+.logo-1 {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    align-items: center;
+    width: 100%;
+}
+
+.lista-1 ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.lista-1 ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.lista-1 ul li a:hover {
+    background-color: #666;
+}
+
+/* Contenido principal */
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-text {
+    flex: 1;
+}
+
+.slider-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider-img img {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Redes sociales */
+.social-links {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    background-color: #666;
+}
