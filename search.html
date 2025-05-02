@@ -11,6 +11,7 @@
     <header>
         <h1 class="title">Encuentra el Restaurante que más te guste</h1>
         <nav class="navbar">
+            <div class="lista-1">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#search-container">Buscar</a></li>
@@ -18,20 +19,21 @@
                 <li><a href="#reservation">Reservas</a></li>
                 <li><a href="#reviews">Opiniones</a></li>
             </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main id="busqueda">
 
         <!-- 🔍 Búsqueda y filtros -->
         <section id="search-container">
             <h2>Encuentra tu Restaurante Favorito</h2>
-            <input type="text" id="search" placeholder="Escribe un nombre o categoría..." />
+            <input type="text" id="search" placeholder="Escribe un nombre ..." />
             <select id="category">
                 <option value="">Todas las categorías</option>
-                <option value="italiano">Italiano</option>
-                <option value="mexicano">Mexicano</option>
-                <option value="japones">Japonés</option>
+                <option value="Italiano">Italiano</option>
+                <option value="Mexicano">Mexicano</option>
+                <option value="Mar">Mar</option>
             </select>
             <button id="search-btn">Buscar</button>
         </section>
@@ -42,65 +44,25 @@
             <div class="carousel">
                 <div class="carousel-item">
                     <img src="restaurante1.png" alt="Restaurante Italiano">
-                    <p>La Pizzería Italiana - ⭐⭐⭐⭐⭐</p>
+                    <p>La Pizzería Italiana</p>
+                    <p>⭐⭐⭐⭐⭐</p>
                 </div>
                 <div class="carousel-item">
                     <img src="restaurante2.png" alt="Restaurante Mexicano">
-                    <p>El Sabor Mexicano - ⭐⭐⭐⭐</p>
+                    <p>El Sabor Mexicano</p>
+                    <p>⭐⭐⭐⭐</p>
                 </div>
                 <div class="carousel-item">
                     <img src="restaurante3.png" alt="Restaurante Japonés">
-                    <p>Sushi House - ⭐⭐⭐⭐⭐</p>
+                    <p>Sushi House</p>
+                    <p>⭐⭐⭐⭐⭐</p>
                 </div>
             </div>
         </section>
 
         <!-- 📌 Resultados de búsqueda -->
+        <h2>Resultados de Búsqueda</h2>
         <section id="search-results" class="restaurant-container">
-            <h2>Resultados de Búsqueda</h2>
-            <div class="restaurant-card">
-                <img src="restaurante1.jpg" alt="Restaurante Italiano">
-                <h3>La Pizzería Italiana</h3>
-                <p>⭐ 4.8 | Cocina Italiana</p>
-                <button class="details-btn">Ver Detalles</button>
-            </div>
-        </section>
-
-        <!-- 📍 Mapa interactivo -->
-        <section id="map-section">
-            <h2>Ubicación de Restaurantes</h2>
-            <div id="map"></div>
-        </section>
-
-        <!-- 📝 Reservas -->
-        <section id="reservation">
-            <h2>Reserva tu Mesa</h2>
-            <form id="reservation-form">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" required>
-
-                <label for="date">Fecha:</label>
-                <input type="date" id="date" required>
-
-                <label for="time">Hora:</label>
-                <input type="time" id="time" required>
-
-                <label for="people">Número de personas:</label>
-                <input type="number" id="people" required>
-
-                <button type="submit">Reservar</button>
-            </form>
-        </section>
-
-        <!-- ⭐ Opiniones de Usuarios -->
-        <section id="reviews">
-            <h2>Opiniones de Usuarios</h2>
-            <div class="review">
-                <p>"La comida fue increíble, el servicio excelente. Definitivamente volveré." - ⭐⭐⭐⭐⭐</p>
-            </div>
-            <div class="review">
-                <p>"Buena comida pero el servicio un poco lento. Aún así, recomendable." - ⭐⭐⭐⭐</p>
-            </div>
         </section>
 
     </main>
@@ -109,8 +71,7 @@
         <p>&copy; 2025 Directorio Gastronómico. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_API&callback=initMap" async defer></script>
+    <script type="module" src="search.js"></script>
 
 </body>
 </html>
