@@ -347,11 +347,6 @@ footer {
     border-radius: 10px; /* Bordes redondeados */
     padding: 5px; /* Espacio interno */
 }
-.restaurantes {
-    background-color: #7FFFD4; /* Agua marina */
-    padding: 30px;
-    border-radius: 10px; /* Bordes redondeados para un mejor diseño */
-}
 
 .restaurantes {
     font-size: 1.5em; /* Puedes ajustar el tamaño según lo necesites */
@@ -404,4 +399,98 @@ button {
     .restaurant-card {
         max-width: 90%;
     }
+}
+
+
+
+.img-izquierda {
+    position: relative;
+    right: 390px; /* Mueve la imagen un poco a la izquierda */
+    margin-top: 350px; /* Ajusta según lo necesario */
+    width: 360px; /* Reduce el ancho de la imagen */
+    height: auto; /* Mantiene la proporción */
+}
+
+.slider-text h1 {
+    font-size: -0.9em; /* Reduce el tamaño */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    margin-left: 220px; /* Empuja el texto hacia el lado derecho */
+    margin-right: 280px; /* Espaciado desde el borde derecho */
+}
+.slider-text p {
+    line-height: -1097.4; /* Reduce la separación entre líneas */
+    text-align: center;
+    max-width: 80%; /* Limita el ancho */
+    margin: 0 auto;
+}
+.slider-text {
+    display: flex;
+    justify-content: flex-end; /* Mueve el texto hacia la derecha */
+    text-align: right;
+}
+.slider-text {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px; /* Evita que quede muy pegado al borde */
+}
+
+
+.slider {
+    background-color: #ffc0cb; /* Rosa claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes suaves */
+}
+
+/* 🎯 Barra de navegación */
+.navbar ul {
+    display: flex;
+    gap: 15px; /* Espaciado entre los enlaces */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: o;
+}
+.navbar ul li a {
+    display: block;
+    padding: 10px 15px; /* Espaciado interno */
+    border: 2px solid #008000; /* Borde verde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #333; /* Color del texto */
+    font-weight: bold;
+    background-color: #c1e1c1; /* Fondo verde claro */
+}
+.navbar ul {
+    display: flex;
+    flex-direction: column; /* Organiza los botones en una columna */
+    align-items: center; /* Alinea al centro verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+}
+.navbar ul li a {
+    display: block;
+    width: 150px; /* Define un ancho fijo para todos */
+    text-align: center;
+    padding: 10px;
+}
+
+
+}
+.navbar ul li a:hover {
+    background-color: #ffc0cb; /* Fondo rosado al pasar el mouse */
+    border-color: #ff6699; /* Cambio de color en el borde */
+}
+.slider-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que el texto se alinee correctamente */
+    padding: 10px;
+}
+.restaurante-img img {
+    width: 220px; /* Reduce el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-top: -20px; /* Mueve la imagen hacia arriba */
+    margin-left: -160px; /* Mueve la imagen más hacia la izquierda */
+    border: 3px solid #000; /* Borde negro */
+
+
 }
