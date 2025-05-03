@@ -1,39 +1,33 @@
-document.getElementById("restaurant-form")?.addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById("name").value;
-    const description = document.getElementById("description").value;
-    const address = document.getElementById("address").value;
-    const image = document.getElementById("image").value;
-
-    if (name && description && address && image) {
-        const newRestaurant = {
-            name,
-            description,
-            address,
-            image
-        };
-
-        // Guardar en LocalStorage (puedes cambiarlo por una base de datos si lo deseas)
-        let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
-        restaurants.push(newRestaurant);
-        localStorage.setItem("restaurants", JSON.stringify(restaurants));
-
-        alert("Restaurante agregado exitosamente!");
-        window.location.href = "index.html"; // Redirigir a la lista de restaurantes
+var swiper = new Swiper(".mySwiper-2", {
+    slidesPerView: 2, // Mostrar más restaurantes al mismo tiempo
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
     }
 });
 
-// Código para cargar restaurantes en `index.html`
+// Cargar restaurantes desde LocalStorage
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.querySelector(".restaurant-container");
-    if (container) {
-        let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
+    let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
+
+    if (container && restaurants.length > 0) {
         restaurants.forEach(rest => {
             let div = document.createElement("div");
             div.classList.add("restaurant-item");
-            div.innerHTML = `<h3>${rest.name}</h3><p>${rest.description}</p><p>${rest.address}</p><img src="${rest.image}" alt="${rest.name}">`;
+            div.innerHTML = `<h3>${rest.name}</h3>
+                             <p>${rest.description}</p>
+                             <p>${rest.address}</p>
+                             <img src="${rest.image}" alt="${rest.name}">`;
             container.appendChild(div);
         });
+    } else {
+        console.log("No se encontraron restaurantes en LocalStorage.");
     }
 });

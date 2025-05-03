@@ -132,3 +132,126 @@ footer {
 .social-links a:hover {
     background-color: #666;
 }
+.slider-img img {
+    border-radius: 0px; /* Bordes redondeados */
+}
+.slider-img img {
+    margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
+}
+.slider-img {
+    position: relative;
+    top: 25px; /* Modifica el número para ajustar la distancia */
+}
+.slider-img img {
+    margin-right: 100px; /* Ajusta según sea necesario */
+}
+.slider-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+}
+.slider-text {
+    max-width: 10000%;
+    margin: 0 auto;
+    text-align: center;
+}
+.slider-text h1 {
+    font-size: 3em; /* Ajusta el tamaño según prefieras */
+    font-weight: bold; /* Hace que se vea más llamativo */
+    text-transform: uppercase; /* Opcional, pone el texto en mayúsculas */
+    text-align: center;
+    display: block;
+    margin: 10 auto; /* Asegura que se mantenga centrado */
+
+}
+.slider-text p {
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    max-width:5000%; /* Limita el ancho para que no sea demasiado amplio */
+    margin: 30px auto; /* Mantiene centrado el bloque de texto */
+}
+.slider-img img {
+    border: 8px solid #ffffff; /* Borde negro sólido */
+    border-radius: 90px; /* Bordes redondeados */
+}
+.slider-img img {
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 
+        -8px -8px 0px #333,  /* Esquina superior izquierda */
+         8px -8px 0px #333,  /* Esquina superior derecha */
+        -8px  8px 0px #333,  /* Esquina inferior izquierda */
+         8px  8px 0px #333;  /* Esquina inferior derecha */
+}
+
+.slider {
+    background-color: #ffc0cb; /* Rosa claro */
+    padding: 20px; /* Espaciado para que el contenido respire */
+    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+}
+.slider-img img {
+    width: 40%; /* Reduce el tamaño al 80% del contenedor */
+    height: auto; /* Mantiene la proporción */
+}
+.slider-img img {
+    margin-top: -50px; /* Mueve la imagen hacia arriba */
+}
+
+.slider-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el título y la imagen */
+}
+
+.destacados-img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    margin-left: 15px; /* Espacio entre el título y la imagen */
+}
+.img-izquierda {
+    border: 5px solid #333; /* Borde sólido negro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espacio interno para que el borde se vea mejor */
+}
+.img-derecha {
+    border: 5px solid #444; /* Borde sólido oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espacio interno */
+}
+.restaurantes {
+    background-color: #7FFFD4; /* Agua marina */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados para un mejor diseño */
+}
+
+.restaurantes {
+    font-size: 1.5em; /* Puedes ajustar el tamaño según lo necesites */
+}
+.restaurantes h1 {
+    font-size: 3em;
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    background-color: rgba(68, 68, 68, 0.8);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #666;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin-top: 10px;
+}
