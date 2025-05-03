@@ -383,3 +383,25 @@ fieldset {
 button {
     margin-top: 10px;
 }
+/* 🎭 Modo oscuro */
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* 📱 Media Queries */
+@media screen and (max-width: 768px) {
+    .restaurant-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .restaurant-container {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-card {
+        max-width: 90%;
+    }
+}
