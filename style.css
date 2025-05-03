@@ -491,6 +491,7 @@ button {
     margin-top: -20px; /* Mueve la imagen hacia arriba */
     margin-left: -160px; /* Mueve la imagen más hacia la izquierda */
     border: 3px solid #000; /* Borde negro */
-
-
+}
+body {
+    background-color: #d3d3d3; /* Gris claro */
 }
