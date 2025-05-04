@@ -493,3 +493,67 @@ button {
     border: 3px solid #000; /* Borde negro */
 }
 
+@keyframes rebote {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(10px); /* Rebote ligero */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.titulo-restaurantes {
+    animation: rebote 1s ease-in-out;
+}
+@keyframes caerDesdeArriba {
+    from {
+        transform: translateY(-50px); /* Comienza más arriba */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Termina en posición normal */
+        opacity: 1;
+    }
+}
+
+.titulo-restaurantes {
+    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
+}
+
+@keyframes deslizarIzquierda {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.texto-restaurantes {
+    animation: deslizarIzquierda 1.5s ease-out;
+}
+
+.titulo-restaurantes {
+    margin-left: 40px; /* Mueve el título hacia la derecha */
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.titulo-restaurantes {
+    animation: zoomIn 1.5s ease-in-out;
+}
