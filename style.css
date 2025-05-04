@@ -221,6 +221,20 @@ main{
 
 .slider-text {
     flex: 1;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    max-width: 10000%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el título y la imagen */
+    text-align: right;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px; /* Evita que quede muy pegado al borde */
+    flex-direction: column;
+    align-items: center; /* Asegura que el texto se alinee correctamente */
+    padding: 10px;
 }
 
 .slider-img {
@@ -229,9 +243,6 @@ main{
     justify-content: flex-end;
     position: relative;
     top: 25px; /* Modifica el número para ajustar la distancia */
-}
-
-.slider-img img {
     max-width: 60%;
     position: relative;
     box-shadow: 
@@ -279,28 +290,6 @@ footer {
     background-color: #666;
 }
 
-.slider-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center;
-    max-width: 10000%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye el título y la imagen */
-    justify-content: flex-end; /* Mueve el texto hacia la derecha */
-    text-align: right;
-    display: block;
-    margin-left: auto;
-    margin-right: 20px; /* Evita que quede muy pegado al borde */
-    flex-direction: column;
-    align-items: center; /* Asegura que el texto se alinee correctamente */
-    padding: 10px;
-}
-
 .slider-text h1 {
     font-size: 3em; /* Ajusta el tamaño según prefieras */
     font-weight: bold; /* Hace que se vea más llamativo */
@@ -308,7 +297,12 @@ footer {
     text-align: center;
     display: block;
     margin: 10 auto; /* Asegura que se mantenga centrado */
-
+    font-size: -0.9em; /* Reduce el tamaño */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    margin-left: 220px; /* Empuja el texto hacia el lado derecho */
+    margin-right: 280px; /* Espaciado desde el borde derecho */
 }
 .slider-text p {
     font-size: 1.5em; /* Aumenta el tamaño de la fuente */
@@ -391,25 +385,17 @@ fieldset {
     }
 }
 
-.slider-text h1 {
-    font-size: -0.9em; /* Reduce el tamaño */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: right;
-    margin-left: 220px; /* Empuja el texto hacia el lado derecho */
-    margin-right: 280px; /* Espaciado desde el borde derecho */
-}
-.slider-text p {
-
-}
-
 /* 🎯 Barra de navegación */
 .navbar ul {
     display: flex;
     gap: 15px; /* Espaciado entre los enlaces */
     list-style: none; /* Elimina los puntos de la lista */
     padding: o;
+    flex-direction: column; /* Organiza los botones en una columna */
+    align-items: center; /* Alinea al centro verticalmente */
+    gap: 10px; /* Espacio entre los botones */
 }
+
 .navbar ul li a {
     display: block;
     padding: 10px 15px; /* Espaciado interno */
@@ -419,18 +405,8 @@ fieldset {
     color: #333; /* Color del texto */
     font-weight: bold;
     background-color: #c1e1c1; /* Fondo verde claro */
-}
-.navbar ul {
-    display: flex;
-    flex-direction: column; /* Organiza los botones en una columna */
-    align-items: center; /* Alinea al centro verticalmente */
-    gap: 10px; /* Espacio entre los botones */
-}
-.navbar ul li a {
-    display: block;
     width: 150px; /* Define un ancho fijo para todos */
     text-align: center;
-    padding: 10px;
 }
 
 .navbar ul li a:hover {
@@ -446,6 +422,14 @@ fieldset {
     border: 3px solid #000; /* Borde negro */
 }
 
+.titulo-restaurantes {
+    animation: rebote 1s ease-in-out;
+    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
+    margin-left: 40px; /* Mueve el título hacia la derecha */
+    animation: zoomIn 1.5s ease-in-out;
+    animation: deslizarIzquierda 1.5s ease-out;
+}
+
 @keyframes rebote {
     0% {
         transform: translateY(-100px);
@@ -458,13 +442,6 @@ fieldset {
     100% {
         transform: translateY(0);
     }
-}
-
-.titulo-restaurantes {
-    animation: rebote 1s ease-in-out;
-    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
-    margin-left: 40px; /* Mueve el título hacia la derecha */
-    animation: zoomIn 1.5s ease-in-out;
 }
 
 @keyframes caerDesdeArriba {
@@ -488,11 +465,6 @@ fieldset {
         opacity: 1;
     }
 }
-
-.texto-restaurantes {
-    animation: deslizarIzquierda 1.5s ease-out;
-}
-
 
 @keyframes zoomIn {
     from {
@@ -518,6 +490,7 @@ fieldset {
 
 .logo-1 {
     animation: aparecerSuavemente 1.5s ease-out; /* Duración y suavidad */
+
 }
 .carousel-item img {
     width: 300px; /* Ajusta el ancho */
@@ -539,10 +512,12 @@ fieldset {
 .carousel-item img {
     animation: fadeIn 1.5s ease-out;
 }
+
 body {
     transform: scale(1); /* Reduce el tamaño al 90% */
     transform-origin: top left; /* Asegura que el cambio sea uniforme */
 }
+
 .redes-sociales {
     position: fixed;
     right: 20px;
@@ -564,6 +539,7 @@ body {
     transform: scale(1.2);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el cursor */
 }
+
 .idioma-selector {
     position: fixed;
     top: 60px; /* Aumentamos el espacio superior para separarlo del botón de inicio */
