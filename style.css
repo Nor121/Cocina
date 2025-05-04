@@ -174,7 +174,7 @@ main{
     text-align: left;
     font-weight: bold;
 }
-#restaurant-form input, textarea{
+#restaurant-form input, #restaurant-form textarea{
     display: block;
     margin: 5px auto 15px auto;
     width: 100%;
