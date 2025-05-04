@@ -557,3 +557,41 @@ button {
 .titulo-restaurantes {
     animation: zoomIn 1.5s ease-in-out;
 }
+@keyframes aparecerSuavemente {
+    from {
+        opacity: 0; /* Oculto al inicio */
+        transform: scale(0.8); /* Comienza más pequeño */
+    }
+    to {
+        opacity: 1; /* Aparece completamente */
+        transform: scale(1); /* Tamaño normal */
+    }
+}
+
+.logo-1 {
+    animation: aparecerSuavemente 1.5s ease-out; /* Duración y suavidad */
+}
+.carousel-item img {
+    width: 300px; /* Ajusta el ancho */
+    height: 250px; /* Ajusta la altura */
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción */
+    border: 3px solid #000; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-item img {
+    animation: fadeIn 1.5s ease-out;
+}
+body {
+    transform: scale(1); /* Reduce el tamaño al 90% */
+    transform-origin: top left; /* Asegura que el cambio sea uniforme */
+}
