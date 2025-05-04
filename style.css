@@ -213,6 +213,10 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    background-color: #ffc0cb; /* Rosa claro */
+    padding: 20px; /* Espaciado para que el contenido respire */
+    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+    padding: 20px; /* Espaciado interno */
 }
 
 .slider-text {
@@ -223,11 +227,25 @@ main{
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    top: 25px; /* Modifica el número para ajustar la distancia */
 }
 
 .slider-img img {
     max-width: 60%;
-    height: auto;
+    position: relative;
+    box-shadow: 
+        -8px -8px 0px #333,  /* Esquina superior izquierda */
+         8px -8px 0px #333,  /* Esquina superior derecha */
+        -8px  8px 0px #333,  /* Esquina inferior izquierda */
+         8px  8px 0px #333;  /* Esquina inferior derecha */
+    width: 40%; /* Reduce el tamaño al 80% del contenedor */
+    height: auto; /* Mantiene la proporción */
+    margin-top: -50px; /* Mueve la imagen hacia arriba */
+    border: 8px solid #ffffff; /* Borde negro sólido */
+    border-radius: 90px; /* Bordes redondeados */
+    margin-right: 100px; /* Ajusta según sea necesario */
+    margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
 }
 
 /* Pie de página */
@@ -260,31 +278,29 @@ footer {
 .social-links a:hover {
     background-color: #666;
 }
-.slider-img img {
-    border-radius: 0px; /* Bordes redondeados */
-}
-.slider-img img {
-    margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
-}
-.slider-img {
-    position: relative;
-    top: 25px; /* Modifica el número para ajustar la distancia */
-}
-.slider-img img {
-    margin-right: 100px; /* Ajusta según sea necesario */
-}
+
 .slider-text {
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra horizontalmente */
     justify-content: center; /* Centra verticalmente */
     text-align: center;
-}
-.slider-text {
     max-width: 10000%;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el título y la imagen */
+    justify-content: flex-end; /* Mueve el texto hacia la derecha */
+    text-align: right;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px; /* Evita que quede muy pegado al borde */
+    flex-direction: column;
+    align-items: center; /* Asegura que el texto se alinee correctamente */
+    padding: 10px;
 }
+
 .slider-text h1 {
     font-size: 3em; /* Ajusta el tamaño según prefieras */
     font-weight: bold; /* Hace que se vea más llamativo */
@@ -299,38 +315,9 @@ footer {
     text-align: center; /* Centra el texto horizontalmente */
     max-width:5000%; /* Limita el ancho para que no sea demasiado amplio */
     margin: 30px auto; /* Mantiene centrado el bloque de texto */
-}
-.slider-img img {
-    border: 8px solid #ffffff; /* Borde negro sólido */
-    border-radius: 90px; /* Bordes redondeados */
-}
-.slider-img img {
-    border-radius: 12px;
-    position: relative;
-    box-shadow: 
-        -8px -8px 0px #333,  /* Esquina superior izquierda */
-         8px -8px 0px #333,  /* Esquina superior derecha */
-        -8px  8px 0px #333,  /* Esquina inferior izquierda */
-         8px  8px 0px #333;  /* Esquina inferior derecha */
-}
-
-.slider {
-    background-color: #ffc0cb; /* Rosa claro */
-    padding: 20px; /* Espaciado para que el contenido respire */
-    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
-}
-.slider-img img {
-    width: 40%; /* Reduce el tamaño al 80% del contenedor */
-    height: auto; /* Mantiene la proporción */
-}
-.slider-img img {
-    margin-top: -50px; /* Mueve la imagen hacia arriba */
-}
-
-.slider-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye el título y la imagen */
+    line-height: -1097.4; /* Reduce la separación entre líneas */
+    text-align: center;
+    max-width: 80%; /* Limita el ancho */
 }
 
 .destacados-img {
@@ -341,6 +328,11 @@ footer {
     border: 5px solid #333; /* Borde sólido negro */
     border-radius: 10px; /* Bordes redondeados */
     padding: 5px; /* Espacio interno para que el borde se vea mejor */
+    position: relative;
+    right: 390px; /* Mueve la imagen un poco a la izquierda */
+    margin-top: 350px; /* Ajusta según lo necesario */
+    width: 360px; /* Reduce el ancho de la imagen */
+    height: auto; /* Mantiene la proporción */
 }
 .img-derecha {
     border: 5px solid #444; /* Borde sólido oscuro */
@@ -364,6 +356,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -375,9 +368,6 @@ fieldset {
     align-items: center;
 }
 
-button {
-    margin-top: 10px;
-}
 /* 🎭 Modo oscuro */
 .dark-mode {
     background-color: #333;
@@ -401,16 +391,6 @@ button {
     }
 }
 
-
-
-.img-izquierda {
-    position: relative;
-    right: 390px; /* Mueve la imagen un poco a la izquierda */
-    margin-top: 350px; /* Ajusta según lo necesario */
-    width: 360px; /* Reduce el ancho de la imagen */
-    height: auto; /* Mantiene la proporción */
-}
-
 .slider-text h1 {
     font-size: -0.9em; /* Reduce el tamaño */
     font-weight: bold;
@@ -420,27 +400,7 @@ button {
     margin-right: 280px; /* Espaciado desde el borde derecho */
 }
 .slider-text p {
-    line-height: -1097.4; /* Reduce la separación entre líneas */
-    text-align: center;
-    max-width: 80%; /* Limita el ancho */
-    margin: 0 auto;
-}
-.slider-text {
-    display: flex;
-    justify-content: flex-end; /* Mueve el texto hacia la derecha */
-    text-align: right;
-}
-.slider-text {
-    display: block;
-    margin-left: auto;
-    margin-right: 20px; /* Evita que quede muy pegado al borde */
-}
 
-
-.slider {
-    background-color: #ffc0cb; /* Rosa claro */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes suaves */
 }
 
 /* 🎯 Barra de navegación */
@@ -473,18 +433,11 @@ button {
     padding: 10px;
 }
 
-
-}
 .navbar ul li a:hover {
     background-color: #ffc0cb; /* Fondo rosado al pasar el mouse */
     border-color: #ff6699; /* Cambio de color en el borde */
 }
-.slider-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Asegura que el texto se alinee correctamente */
-    padding: 10px;
-}
+
 .restaurante-img img {
     width: 220px; /* Reduce el tamaño de la imagen */
     height: auto; /* Mantiene la proporción */
@@ -509,7 +462,11 @@ button {
 
 .titulo-restaurantes {
     animation: rebote 1s ease-in-out;
+    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
+    margin-left: 40px; /* Mueve el título hacia la derecha */
+    animation: zoomIn 1.5s ease-in-out;
 }
+
 @keyframes caerDesdeArriba {
     from {
         transform: translateY(-50px); /* Comienza más arriba */
@@ -519,10 +476,6 @@ button {
         transform: translateY(0); /* Termina en posición normal */
         opacity: 1;
     }
-}
-
-.titulo-restaurantes {
-    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
 }
 
 @keyframes deslizarIzquierda {
@@ -540,9 +493,7 @@ button {
     animation: deslizarIzquierda 1.5s ease-out;
 }
 
-.titulo-restaurantes {
-    margin-left: 40px; /* Mueve el título hacia la derecha */
-}
+
 @keyframes zoomIn {
     from {
         transform: scale(0.5);
@@ -553,10 +504,7 @@ button {
         opacity: 1;
     }
 }
-
-.titulo-restaurantes {
-    animation: zoomIn 1.5s ease-in-out;
-}
+    
 @keyframes aparecerSuavemente {
     from {
         opacity: 0; /* Oculto al inicio */
