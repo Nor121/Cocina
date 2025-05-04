@@ -595,3 +595,24 @@ body {
     transform: scale(1); /* Reduce el tamaño al 90% */
     transform-origin: top left; /* Asegura que el cambio sea uniforme */
 }
+.redes-sociales {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.redes-sociales a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Bordes completamente redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el cursor */
+}
