@@ -84,7 +84,11 @@ main{
     background-color:var(--color-caramel-drizzle);
 }
 
-
+#fondo{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
 #busqueda img{
     border-radius: 10%;
     height: 200px;

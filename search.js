@@ -2,6 +2,8 @@ import { restaurantes } from "./restaurantes.js";
 
 const SearchResults = document.getElementById("search-results");
 const categoria = document.getElementById("category");
+const btnBuscar = document.getElementById("search-btn");
+const nombreBuscado = document.getElementById("search");
 
 const mostrarRestaurantes= (lista = restaurantes)=>{
     SearchResults.innerHTML += lista.map(
@@ -35,6 +37,12 @@ categoria.addEventListener("change", (e) => {
     default:
         mostrarRestaurantes();
     }
+});
+
+btnBuscar.addEventListener("click",()=>{
+    SearchResults.innerHTML= "";
+    mostrarRestaurantes(restaurantes.filter((restaurante)=> restaurante.name.toLowerCase().includes(nombreBuscado.value.toLowerCase())));
+    categoria.value=""
 });
 
 mostrarRestaurantes();
