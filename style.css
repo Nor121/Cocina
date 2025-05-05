@@ -3,17 +3,35 @@
     box-sizing: border-box;
   }
 
+:root{
+    --color-fondo: #fce9d8;
+    --color-cinnamon-latte: #B8957F;
+    --color-caramel-drizzle: #AB7843;
+    --color-cafe-semioscuro: #6D3914;
+    --color-cafe-oscuro: #4C2B08;
+}
+
+.roboto-normal {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "roboto-normal", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: var(--color-fondo);
+    color: var(--color-cafe-oscuro);
 }
 
 /* Encabezado */
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-cafe-oscuro);
+    color: var(--color-fondo);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,31 +53,34 @@ main{
 #search-container input{
     width: 40%;
     border: none;
-    border-bottom: 2px solid #6e6e6e;
-    background-color: #f8f8f8;
+    border-bottom: 2px solid var(--color-caramel-drizzle);
+    background-color: var(--color-fondo);
+    transition: border ease-in 300ms;
 }
 
 #search-container input:focus{
    outline: none;
-   border-bottom: 3px solid #1b1b1b;
+   border-bottom: 2px solid var(--color-cafe-oscuro);
 }
 
 #search-container select{
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px;
+    background-color: var(--color-cafe-semioscuro);
+    color: var(--color-fondo);
 }
 
 #search-container button{
     border-radius: 5px;
-    background-color: #444;
-    color: white;
+    background-color: var(--color-cafe-semioscuro);
+    color: var(--color-fondo);
     border: none;
     cursor: pointer;
     font-size: 1em;
 }
 
 #search-container button:hover{
-    background-color:#666 ;
+    background-color:var(--color-caramel-drizzle);
 }
 
 
@@ -88,17 +109,37 @@ main{
     margin: 0;
 }
 
+.carousel-item img {
+    width: 300px; /* Ajusta el ancho */
+    height: 250px; /* Ajusta la altura */
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #search-results{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    font-size:0.8em;
 }
 
 .restaurant-card{
     text-align: center;
     align-items: center;
     margin: 1.2rem;
+    animation: fadeIn 1.5s ease-out;
+    object-fit: cover;
 }
 
 .restaurant-card h3{
@@ -125,6 +166,7 @@ main{
     width: 60%;
     margin: 0 auto;
     text-align: left;
+    border: none;
 }
 #restaurant-form label{
     display: block;
@@ -137,13 +179,14 @@ main{
     margin: 5px auto 15px auto;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #6e6e6e;
-    background-color: #f8f8f8;
+    border-bottom: 2px solid var(--color-caramel-drizzle);
+    background-color: var(--color-fondo);
     padding: 8px 0;
+    transition: border ease-in-out 300ms;
 }
-#restaurant-form input:focus, textarea:focus{
+#restaurant-form input:focus, #restaurant-form textarea:focus{
     outline: none;
-    border-bottom: 3px solid #1b1b1b;
+    border-bottom: 2px solid var(--color-cafe-oscuro);
 }
 
 .form-group{
@@ -153,8 +196,8 @@ main{
 #restaurant-form button{
     display: block;
     padding: 5px 20px;
-    background-color: #444;
-    color: white;
+    background-color: var(--color-cafe-semioscuro);
+    color: var(--color-fondo);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -162,7 +205,7 @@ main{
     margin: 20px auto;
 }
 #restaurant-form button:hover{
-    background-color:#666 ;
+    background-color:var(--color-caramel-drizzle) ;
 }
 
 /*Aca termina CSS Formulario Nuevo*/
@@ -178,7 +221,7 @@ main{
     margin-right: 15px;
 }
 
-/* Navegación */
+/* 🎯 Barra de navegación */    
 .navbar {
     display: flex;
     justify-content: flex-end; /* Alinea el menú a la derecha */
@@ -186,242 +229,33 @@ main{
     width: 100%;
 }
 
-.lista-1 ul {
-    display: flex;
+.lista-1 ul{
     list-style: none;
+    display: flex;
     gap: 10px;
-    padding: 0;
 }
 
-.lista-1 ul li a {
+.lista-1 li a {
     text-decoration: none;
     font-weight: bold;
-    color: white;
+    color: var(--color-fondo);
     padding: 8px 15px;
-    background-color: #444;
+    background-color: var(--color-cafe-oscuro);
     border-radius: 5px;
+    
 }
 
 .lista-1 ul li a:hover {
-    background-color: #666;
+    background-color: var(--color-cafe-semioscuro);
 }
 /*Aca termina CSS de la navegacion*/
 
-/* Contenido principal */
-.slider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    background-color: #ffc0cb; /* Rosa claro */
-    padding: 20px; /* Espaciado para que el contenido respire */
-    flex: 1;
-    position: relative;
-    top: 25px; /* Modifica el número para ajustar la distancia */
-    max-width: 60%;
-    box-shadow: 
-        -8px -8px 0px #333,  /* Esquina superior izquierda */
-         8px -8px 0px #333,  /* Esquina superior derecha */
-        -8px  8px 0px #333,  /* Esquina inferior izquierda */
-         8px  8px 0px #333;  /* Esquina inferior derecha */
-    width: 40%; /* Reduce el tamaño al 80% del contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 90px; /* Bordes redondeados */
-    margin-right: 100px; /* Ajusta según sea necesario */
-    margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
-}
-
 /* Pie de página */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-cafe-oscuro);
+    color: var(--color-fondo);
     text-align: center;
     padding: 10px;
-}
-
-/* Redes sociales */
-.social-links {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #444;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.social-links a:hover {
-    background-color: #666;
-}
-
-.slider-text h1 {
-    font-size: 3em; /* Ajusta el tamaño según prefieras */
-    font-weight: bold; /* Hace que se vea más llamativo */
-    text-transform: uppercase; /* Opcional, pone el texto en mayúsculas */
-    display: block;
-    margin: 10 auto; /* Asegura que se mantenga centrado */
-    font-size: -0.9em; /* Reduce el tamaño */
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: right;
-    margin-left: 220px; /* Empuja el texto hacia el lado derecho */
-    margin-right: 280px; /* Espaciado desde el borde derecho */
-}
-
-.slider-text p {
-    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin: 30px auto; /* Mantiene centrado el bloque de texto */
-    line-height: -1097.4; /* Reduce la separación entre líneas */
-    max-width: 80%; /* Limita el ancho */
-}
-
-.destacados-img {
-    width: 80px; /* Ajusta el tamaño de la imagen */
-    margin-left: 15px; /* Espacio entre el título y la imagen */
-}
-
-.img-izquierda {
-    border: 5px solid #333; /* Borde sólido negro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 5px; /* Espacio interno para que el borde se vea mejor */
-    position: relative;
-    right: 390px; /* Mueve la imagen un poco a la izquierda */
-    margin-top: 350px; /* Ajusta según lo necesario */
-    width: 360px; /* Reduce el ancho de la imagen */
-    height: auto; /* Mantiene la proporción */
-}
-
-.img-derecha {
-    border: 5px solid #444; /* Borde sólido oscuro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 5px; /* Espacio interno */
-}
-
-.restaurantes {
-    font-size: 1.5em; /* Puedes ajustar el tamaño según lo necesites */
-}
-
-/* Botón */
-button {
-    padding: 10px;
-    background-color: rgba(68, 68, 68, 0.8);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #666;
-}
-fieldset {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 🎭 Modo oscuro */
-.dark-mode {
-    background-color: #333;
-    color: white;
-}
-
-/* 📱 Media Queries */
-@media screen and (max-width: 768px) {
-    .restaurant-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .restaurant-container {
-        grid-template-columns: 1fr;
-    }
-
-    .restaurant-card {
-        max-width: 90%;
-    }
-}
-
-/* 🎯 Barra de navegación */
-.navbar ul {
-    display: flex;
-    gap: 15px; /* Espaciado entre los enlaces */
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: o;
-    flex-direction: column; /* Organiza los botones en una columna */
-    align-items: center; /* Alinea al centro verticalmente */
-    gap: 10px; /* Espacio entre los botones */
-}
-
-.navbar ul li a {
-    display: block;
-    padding: 10px 15px; /* Espaciado interno */
-    border: 2px solid #008000; /* Borde verde */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Elimina el subrayado */
-    color: #333; /* Color del texto */
-    font-weight: bold;
-    background-color: #c1e1c1; /* Fondo verde claro */
-    width: 150px; /* Define un ancho fijo para todos */
-    text-align: center;
-}
-
-.navbar ul li a:hover {
-    background-color: #ffc0cb; /* Fondo rosado al pasar el mouse */
-    border-color: #ff6699; /* Cambio de color en el borde */
-}
-
-.restaurante-img img {
-    width: 220px; /* Reduce el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
-    margin-top: -20px; /* Mueve la imagen hacia arriba */
-    margin-left: -160px; /* Mueve la imagen más hacia la izquierda */
-    border: 3px solid #000; /* Borde negro */
-}
-
-.titulo-restaurantes {
-    animation: rebote 1s ease-in-out;
-    animation: caerDesdeArriba 1s ease-out; /* Efecto suave */
-    margin-left: 40px; /* Mueve el título hacia la derecha */
-    animation: zoomIn 1.5s ease-in-out;
-    animation: deslizarIzquierda 1.5s ease-out;
-}
-
-@keyframes rebote {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    80% {
-        transform: translateY(10px); /* Rebote ligero */
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes caerDesdeArriba {
-    from {
-        transform: translateY(-50px); /* Comienza más arriba */
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0); /* Termina en posición normal */
-        opacity: 1;
-    }
 }
 
 @keyframes deslizarIzquierda {
@@ -434,6 +268,33 @@ fieldset {
         opacity: 1;
     }
 }
+.slider-text{
+    animation: deslizarIzquierda 1.5s ease-out;
+}
+.slider-text h1 {
+    font-size: 2.5em; /* Ajusta el tamaño según prefieras */
+    font-weight: bold; /* Hace que se vea más llamativo */
+    text-transform: uppercase; /* Opcional, pone el texto en mayúsculas */
+    text-align: center;
+    display: block;
+    margin: 10 auto; /* Asegura que se mantenga centrado */
+
+}
+.slider-text p {
+    text-align: center;
+    max-width: 80%; /* Limita el ancho */
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+
+.restaurante-img img {
+    width: 220px; /* Reduce el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-top: -20px; /* Mueve la imagen hacia arriba */
+    margin-left: -160px; /* Mueve la imagen más hacia la izquierda */
+    border: 3px solid #000; /* Borde negro */
+}
 
 @keyframes zoomIn {
     from {
@@ -445,7 +306,11 @@ fieldset {
         opacity: 1;
     }
 }
-    
+
+.titulo-restaurantes {
+    animation: zoomIn 1.5s ease-in-out;
+    margin-left: 50px;
+}
 @keyframes aparecerSuavemente {
     from {
         opacity: 0; /* Oculto al inicio */
@@ -459,32 +324,6 @@ fieldset {
 
 .logo-1 {
     animation: aparecerSuavemente 1.5s ease-out; /* Duración y suavidad */
-
-}
-.carousel-item img {
-    width: 300px; /* Ajusta el ancho */
-    height: 250px; /* Ajusta la altura */
-    object-fit: cover; /* Asegura que las imágenes mantengan proporción */
-    border: 3px solid #000; /* Borde negro */
-    border-radius: 10px; /* Bordes redondeados */
-
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.carousel-item img {
-    animation: fadeIn 1.5s ease-out;
-}
-
-body {
-    transform: scale(1); /* Reduce el tamaño al 90% */
-    transform-origin: top left; /* Asegura que el cambio sea uniforme */
 }
 
 .redes-sociales {
@@ -497,6 +336,9 @@ body {
     gap: 15px;
 }
 
+.redes-sociales a{
+    background-color: transparent;
+}
 .redes-sociales a img {
     width: 40px;
     height: 40px;
@@ -508,11 +350,10 @@ body {
     transform: scale(1.2);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el cursor */
 }
-
 .idioma-selector {
     position: fixed;
-    top: 60px; /* Aumentamos el espacio superior para separarlo del botón de inicio */
-    right: 190px; /* Lo movemos ligeramente a la izquierda */
+    bottom: 10px; /* Aumentamos el espacio superior para separarlo del botón de inicio */
+    left: 10px; /* Lo movemos ligeramente a la izquierda */
     background: white;
     padding: 8px 12px;
     border-radius: 8px;
@@ -520,6 +361,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #000;
 }
 
 #idioma {
