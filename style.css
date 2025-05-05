@@ -1,5 +1,5 @@
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
   }
 
@@ -30,7 +30,7 @@ body {
 
 /* Encabezado */
 header {
-    background-color: var(--color-cafe-oscuro);
+    background-image: linear-gradient(180deg, var(--color-cafe-oscuro)75% , #4C2B0800 );
     color: var(--color-fondo);
     display: flex;
     align-items: center;
@@ -278,8 +278,6 @@ footer {
     text-transform: uppercase; /* Opcional, pone el texto en mayúsculas */
     text-align: center;
     display: block;
-    margin: 10 auto; /* Asegura que se mantenga centrado */
-
 }
 .slider-text p {
     text-align: center;
