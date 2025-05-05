@@ -215,14 +215,7 @@ main{
     gap: 20px;
     background-color: #ffc0cb; /* Rosa claro */
     padding: 20px; /* Espaciado para que el contenido respire */
-    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
-    padding: 20px; /* Espaciado interno */
-}
-
-.slider-img {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
     position: relative;
     top: 25px; /* Modifica el número para ajustar la distancia */
     max-width: 60%;
@@ -233,7 +226,6 @@ main{
          8px  8px 0px #333;  /* Esquina inferior derecha */
     width: 40%; /* Reduce el tamaño al 80% del contenedor */
     height: auto; /* Mantiene la proporción */
-    margin-top: -50px; /* Mueve la imagen hacia arriba */
     border-radius: 90px; /* Bordes redondeados */
     margin-right: 100px; /* Ajusta según sea necesario */
     margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
@@ -274,7 +266,6 @@ footer {
     font-size: 3em; /* Ajusta el tamaño según prefieras */
     font-weight: bold; /* Hace que se vea más llamativo */
     text-transform: uppercase; /* Opcional, pone el texto en mayúsculas */
-    text-align: center;
     display: block;
     margin: 10 auto; /* Asegura que se mantenga centrado */
     font-size: -0.9em; /* Reduce el tamaño */
@@ -288,10 +279,8 @@ footer {
 .slider-text p {
     font-size: 1.5em; /* Aumenta el tamaño de la fuente */
     text-align: center; /* Centra el texto horizontalmente */
-    max-width:5000%; /* Limita el ancho para que no sea demasiado amplio */
     margin: 30px auto; /* Mantiene centrado el bloque de texto */
     line-height: -1097.4; /* Reduce la separación entre líneas */
-    text-align: center;
     max-width: 80%; /* Limita el ancho */
 }
 
