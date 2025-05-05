@@ -24,13 +24,13 @@ body {
     font-family: "roboto-normal", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-fondo);
     color: var(--color-cafe-oscuro);
 }
 
 /* Encabezado */
 header {
-    background-image: linear-gradient(180deg, var(--color-cafe-oscuro)75% , #4C2B0800 );
+    /*background-image: linear-gradient(180deg, var(--color-cafe-oscuro)75% , #4C2B0800 );*/
+    background-color: var(--color-cafe-oscuro);
     color: var(--color-fondo);
     display: flex;
     align-items: center;
@@ -39,9 +39,10 @@ header {
 }
 
 main{
-    max-width: 1000px;
     margin: auto;
     padding: 30px;
+    background-image: linear-gradient(180deg,var(--color-cafe-oscuro)1%,var(--color-fondo)3%);
+    min-height: 78vh;
 }
 
 /*CSS de la pagina search*/
@@ -153,6 +154,9 @@ main{
 /*Aca termina css de la pagina search*/
 
 /*Css Nuevo formulario*/
+#form-section{
+    width: 100%;
+}
 #form-section h2{
     text-align: center;
 }
@@ -162,6 +166,7 @@ main{
     justify-items: center;
     display: block;
     animation: fadeIn 1s ease-out;
+    max-width:1000px;
 }
 #restaurant-form fieldset{
     width: 60%;
@@ -204,6 +209,7 @@ main{
     cursor: pointer;
     font-size: 1em;
     margin: 20px auto;
+    transition: all ease-in-out 300ms;
 }
 #restaurant-form button:hover{
     background-color:var(--color-caramel-drizzle) ;
