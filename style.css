@@ -161,6 +161,7 @@ main{
     text-align: center;
     justify-items: center;
     display: block;
+    animation: fadeIn 1s ease-out;
 }
 #restaurant-form fieldset{
     width: 60%;
