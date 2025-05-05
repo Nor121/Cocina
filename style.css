@@ -225,11 +225,7 @@ main{
     justify-content: flex-end;
     position: relative;
     top: 25px; /* Modifica el número para ajustar la distancia */
-}
-
-.slider-img img {
     max-width: 60%;
-    position: relative;
     box-shadow: 
         -8px -8px 0px #333,  /* Esquina superior izquierda */
          8px -8px 0px #333,  /* Esquina superior derecha */
@@ -238,7 +234,6 @@ main{
     width: 40%; /* Reduce el tamaño al 80% del contenedor */
     height: auto; /* Mantiene la proporción */
     margin-top: -50px; /* Mueve la imagen hacia arriba */
-    border: 8px solid #ffffff; /* Borde negro sólido */
     border-radius: 90px; /* Bordes redondeados */
     margin-right: 100px; /* Ajusta según sea necesario */
     margin-top: 30px; /* Ajusta la cantidad según lo que necesites */
@@ -289,6 +284,7 @@ footer {
     margin-left: 220px; /* Empuja el texto hacia el lado derecho */
     margin-right: 280px; /* Espaciado desde el borde derecho */
 }
+
 .slider-text p {
     font-size: 1.5em; /* Aumenta el tamaño de la fuente */
     text-align: center; /* Centra el texto horizontalmente */
@@ -303,6 +299,7 @@ footer {
     width: 80px; /* Ajusta el tamaño de la imagen */
     margin-left: 15px; /* Espacio entre el título y la imagen */
 }
+
 .img-izquierda {
     border: 5px solid #333; /* Borde sólido negro */
     border-radius: 10px; /* Bordes redondeados */
@@ -313,6 +310,7 @@ footer {
     width: 360px; /* Reduce el ancho de la imagen */
     height: auto; /* Mantiene la proporción */
 }
+
 .img-derecha {
     border: 5px solid #444; /* Borde sólido oscuro */
     border-radius: 10px; /* Bordes redondeados */
@@ -321,9 +319,6 @@ footer {
 
 .restaurantes {
     font-size: 1.5em; /* Puedes ajustar el tamaño según lo necesites */
-}
-.restaurantes h1 {
-    font-size: 3em;
 }
 
 /* Botón */
