@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Definir traducciones fuera de la función para que estén disponibles globalmente
 const traducciones = {
-    es: {
+    Español: {
         titulo: "Directorio de Restaurantes Max Food",
         destacados: "🍽️ Restaurantes Destacados",
         descripcion: `"Descubre los mejores restaurantes, donde la calidad, el sabor y la experiencia se combinan 
@@ -46,7 +46,7 @@ const traducciones = {
         restaurantes: "Restaurantes",
         footer: "© 2025 Directorio Gastronómico. Todos los derechos reservados."
     },
-    en: {
+    English: {
         titulo: "Max Food Restaurant Directory",
         destacados: "🍽️ Featured Restaurants",
         descripcion: `"Discover the best restaurants, where quality, flavor, and experience come together 
